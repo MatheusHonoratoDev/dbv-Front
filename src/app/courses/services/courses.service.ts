@@ -9,7 +9,7 @@ export class CoursesService {
   isAuthenticated: boolean = false;
   challengeId: any;
 
-  private readonly API = 'http://localhost:8800';
+  private readonly API = 'https://clube-dbv-1946073446dc.herokuapp.com';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,11 +26,11 @@ export class CoursesService {
   }
 
   getCategorias(): Observable<any[]> {
-    return this.httpClient.get<any[]>('http://localhost:8800/getCategorias');
+    return this.httpClient.get<any[]>('https://clube-dbv-1946073446dc.herokuapp.com/getCategorias');
   }
 
   getChallengeById(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getChallengeById/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getChallengeById/${id}`)
   }
 
   setChallengeId(member: any) {
@@ -42,7 +42,7 @@ export class CoursesService {
   }
 
   getMembersbyId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getMembersbyId/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getMembersbyId/${id}`)
   }
 
   createPublications(data: any): Observable<any> {
@@ -66,7 +66,7 @@ export class CoursesService {
   }
 
   chellengePoints(data: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/chellengePoints', data);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/chellengePoints', data);
   }
 
   getChallengePoints(userId: any, challengerId: any): Observable<any>{

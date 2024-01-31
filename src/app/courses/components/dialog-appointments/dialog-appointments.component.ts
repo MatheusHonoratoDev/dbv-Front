@@ -13,7 +13,7 @@ import { format, addDays } from 'date-fns';
 })
 export class DialogAppointmentsComponent implements OnInit {
   qrCodeData: string = '';
-  backendUrl = 'http://localhost:8800';
+  backendUrl = 'https://clube-dbv-1946073446dc.herokuapp.com/';
   buttonColors = ['#329cff', '#2497d5', '#1b709d', '#155577']; 
   currentColorIndex = 0;
   jsonString: any;
@@ -99,7 +99,7 @@ export class DialogAppointmentsComponent implements OnInit {
     );
   
     this.http
-      .get<any[]>('http://localhost:8800/getAppointments')
+      .get<any[]>('https://clube-dbv-1946073446dc.herokuapp.com/getAppointments')
       .subscribe((data) => {
         const availableSlots = this.extractAvailableSlots(data, weekDates);
   
@@ -169,7 +169,7 @@ export class DialogAppointmentsComponent implements OnInit {
     };
 
     this.http
-      .post(`http://localhost:8800/enviarMensagem`, requestData)
+      .post(`https://clube-dbv-1946073446dc.herokuapp.com/enviarMensagem`, requestData)
       .subscribe(
         (response: any) => {
           console.log('Resposta do backend (enviarMensagem):', response);

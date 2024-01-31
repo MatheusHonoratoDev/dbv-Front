@@ -43,7 +43,7 @@ export class AuthService {
   }
 
   authenticateUser(login: string, password: string): Observable<any> {
-    const url = `http://localhost:8800/getUserByLoginAndPassword`;
+    const url = `https://clube-dbv-1946073446dc.herokuapp.com/getUserByLoginAndPassword`;
     const body = { login, password };
   
     return this.http.post(url, body).pipe(

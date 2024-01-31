@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MyUnityService {
   member: any;
-  private readonly API = 'http://localhost:8800';
+  private readonly API = 'https://clube-dbv-1946073446dc.herokuapp.com';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,10 +20,10 @@ export class MyUnityService {
   }
 
   getMembersByUnitId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getMembersByUnitId/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com//getMembersByUnitId/${id}`)
   }
 
   addPoints(data: any){
-    return this.httpClient.post<any>(`http://localhost:8800/addPoints`, { data })
+    return this.httpClient.post<any>(`https://clube-dbv-1946073446dc.herokuapp.com/addPoints`, { data })
   }
 }

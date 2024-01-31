@@ -10,10 +10,10 @@ export class MyProfileService {
   constructor(private httpClient: HttpClient) { }
 
   getMembersbyId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getMembersbyId/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getMembersbyId/${id}`)
   }
 
   editMember(editMember: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/editMember', editMember);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/editMember', editMember);
   }
 }

@@ -14,27 +14,27 @@ export class AdminService {
 
 
   creatChallenge(challenge: any): Observable<any> {
-    return this.httpClient.post<any>('http://localhost:8800/creatChallenge', challenge);
+    return this.httpClient.post<any>('https://clube-dbv-1946073446dc.herokuapp.com/creatChallenge', challenge);
   }
   
   getCustomers(): Observable<any[]> {
-    return this.httpClient.get<any[]>('http://localhost:8800/getcustomers');
+    return this.httpClient.get<any[]>('https://clube-dbv-1946073446dc.herokuapp.com/getcustomers');
   }
 
   getCategorias(): Observable<any[]> {
-    return this.httpClient.get<any[]>('http://localhost:8800/getCategorias');
+    return this.httpClient.get<any[]>('https://clube-dbv-1946073446dc.herokuapp.com/getCategorias');
   }
 
   getRoles(): Observable<any[]> {
-    return this.httpClient.get<any[]>('http://localhost:8800/getRoles');
+    return this.httpClient.get<any[]>('https://clube-dbv-1946073446dc.herokuapp.com/getRoles');
   }
 
   editEstabelecimento(editCustomer: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/editCustomerViewAdm', editCustomer);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/editCustomerViewAdm', editCustomer);
   }
 
   deleteEstabelecimento(deletedCustomer: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/deleteCustomer', deletedCustomer);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/deleteCustomer', deletedCustomer);
   }
 
   getAddressByCep(cep: string): Observable<any> {
@@ -43,32 +43,32 @@ export class AdminService {
   }
 
   getChallenges(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getChallenges`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getChallenges`);
   }
 
   getChallengeById(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getChallengeById/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getChallengeById/${id}`)
   }
 
   updateChallenge(editChallenge: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/updateChallenge', editChallenge);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/updateChallenge', editChallenge);
   }
 
   registerMember(member: any): Observable<any> {
-    return this.httpClient.post<any>('http://localhost:8800/registerMember', member);
+    return this.httpClient.post<any>('https://clube-dbv-1946073446dc.herokuapp.com/registerMember', member);
   }
 
 
   getPositions(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getPositions`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getPositions`);
   }
   
   getMembers(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getMembers`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getMembers`);
   }
   
   getInactiveMembers(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getInactiveMembers`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getInactiveMembers`);
   }
 
   setMember(member: any) {
@@ -80,76 +80,76 @@ export class AdminService {
   }
 
   getMembersbyId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getMembersbyId/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getMembersbyId/${id}`)
   }
 
   editMember(editMember: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/editMember', editMember);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/editMember', editMember);
   }
 
   getStatusMember(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getStatusMember/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getStatusMember/${id}`)
   }
 
   changeStatus(data: any): Observable<any>{
-    return this.httpClient.put<any>(`http://localhost:8800/changeStatus/`, data)
+    return this.httpClient.put<any>(`https://clube-dbv-1946073446dc.herokuapp.com/changeStatus/`, data)
   }
 
   filterMemberName(data: any): Observable<any> {
-    return this.httpClient.post<any>(`http://localhost:8800/filterMemberName`, data);
+    return this.httpClient.post<any>(`https://clube-dbv-1946073446dc.herokuapp.com/filterMemberName`, data);
   }
 
   filterMemberNameInactive(data: any): Observable<any> {
-    return this.httpClient.post<any>(`http://localhost:8800/filterMemberNameInactive`, data);
+    return this.httpClient.post<any>(`https://clube-dbv-1946073446dc.herokuapp.com/filterMemberNameInactive`, data);
   }
 
   getUnits(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getUnits`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getUnits`);
   }
 
   createUnit(data: any): Observable<any> {
-    return this.httpClient.post<any>(`http://localhost:8800/createUnit`, data);
+    return this.httpClient.post<any>(`https://clube-dbv-1946073446dc.herokuapp.com/createUnit`, data);
   }
 
   getUnitbyId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getUnityById/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getUnityById/${id}`)
   }
 
   updateUnit(data: any): Observable<any>{
-    return this.httpClient.put<any>(`http://localhost:8800/updateUnit/`, data)
+    return this.httpClient.put<any>(`https://clube-dbv-1946073446dc.herokuapp.com/updateUnit/`, data)
   }
 
 
   getTools(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getTools`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getTools`);
   }
 
   createTool(data: any): Observable<any> {
-    return this.httpClient.post<any>(`http://localhost:8800/createTool`, data);
+    return this.httpClient.post<any>(`https://clube-dbv-1946073446dc.herokuapp.com/createTool`, data);
   }
 
   getToolsById(id: any): Observable<any>{
-    return this.httpClient.get<any>(`http://localhost:8800/getToolsById/${id}`)
+    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getToolsById/${id}`)
   }
 
   updateTools(data: any): Observable<any>{
-    return this.httpClient.put<any>(`http://localhost:8800/updateTools/`, data)
+    return this.httpClient.put<any>(`https://clube-dbv-1946073446dc.herokuapp.com/updateTools/`, data)
   }
 
   updateStatusTools(data: any): Observable<any>{
-    return this.httpClient.put<any>(`http://localhost:8800/updateT/`, data)
+    return this.httpClient.put<any>(`https://clube-dbv-1946073446dc.herokuapp.com/updateT/`, data)
   }
 
   getNameUnits(): Observable<any[]>{
-    return this.httpClient.get<any[]>(`http://localhost:8800/getNameUnits`);
+    return this.httpClient.get<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/getNameUnits`);
   }
 
   createEstabelecimento(estabelecimentoData: any): Observable<any> {
-    return this.httpClient.post<any>('http://localhost:8800/creatEstabelicimento', estabelecimentoData);
+    return this.httpClient.post<any>('https://clube-dbv-1946073446dc.herokuapp.com/creatEstabelicimento', estabelecimentoData);
   }
 
   getCustumerById(id: number): Observable<any[]> {
-    const url = `http://localhost:8800/getcustomersById/${id}`;
+    const url = `https://clube-dbv-1946073446dc.herokuapp.com/getcustomersById/${id}`;
     return this.httpClient.get<any[]>(url);
   }
 
@@ -161,12 +161,12 @@ export class AdminService {
   }
 
   getStatus(id: number): Observable<any[]> {
-    const url = `http://localhost:8800/getStatus/${id}`;
+    const url = `https://clube-dbv-1946073446dc.herokuapp.com/getStatus/${id}`;
     return this.httpClient.get<any[]>(url);
   }
 
   setStatus(status: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/deleteCustomer', status);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/deleteCustomer', status);
   }
 
   uploadFile(file: File) {
@@ -177,24 +177,24 @@ export class AdminService {
   }
   
   getProfilePicture(id: number): Observable<any[]>{
-    const url = `http://localhost:8800/getProfilePicture/${id}`;
+    const url = `https://clube-dbv-1946073446dc.herokuapp.com/getProfilePicture/${id}`;
     return this.httpClient.get<any[]>(url);
   }
 
   getFotos(id: number): Observable<any[]>{
-    const url = `http://localhost:8800/getFotos/${id}`;
+    const url = `https://clube-dbv-1946073446dc.herokuapp.com/getFotos/${id}`;
     return this.httpClient.get<any[]>(url);
   }
 
   editProfilePicture(editProfilePicture: any): Observable<any> {
-    return this.httpClient.put<any>('http://localhost:8800/editProfilePicture', editProfilePicture);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/editProfilePicture', editProfilePicture);
   }
   
   addphotos(fotos: any): Observable<any>{
-    return this.httpClient.put<any>('http://localhost:8800/editPhotos', fotos);
+    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/editPhotos', fotos);
   }
 
   deleteImage(value: any): Observable<any[]>{
-    return this.httpClient.put<any[]>(`http://localhost:8800/deleteImage`, value)
+    return this.httpClient.put<any[]>(`https://clube-dbv-1946073446dc.herokuapp.com/deleteImage`, value)
   }
 }
