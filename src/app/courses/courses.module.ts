@@ -9,7 +9,6 @@ import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { QRCodeModule } from 'angularx-qrcode';
 import { ChallengeDetailsComponent } from './components/challenge-details/challenge-details.component';
 import { PublicationsComponent } from './components/publications/publications.component';
 import { DialogPubComponent } from './components/dialog-pub/dialog-pub.component';
@@ -33,7 +32,6 @@ import { RakingComponent } from '../shared/components/raking/raking.component';
     SharedModule,
     ReactiveFormsModule,
     GoogleMapsModule,
-    QRCodeModule,
   ],
 })
 export class CoursesModule {}

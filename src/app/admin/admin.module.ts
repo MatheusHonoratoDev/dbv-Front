@@ -8,7 +8,6 @@ import { MatCardModule } from '@angular/material/card';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
-import { QRCodeModule } from 'angularx-qrcode';
 import { ChallangeRegisterComponent } from './challange-register/challange-register.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { RegisterMemberComponent } from './register-member/register-member.component';
@@ -39,7 +38,6 @@ import { ToolsComponent } from './tools/tools.component';
     MatCardModule,
     SharedModule,
     ReactiveFormsModule,
-    QRCodeModule
   ]
 })
 export class AdminModule { }
