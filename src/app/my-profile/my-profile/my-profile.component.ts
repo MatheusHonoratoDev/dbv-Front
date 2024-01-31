@@ -68,6 +68,7 @@ export class MyProfileComponent {
       status: true,
       login: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
+      id: ['']
     });
   }
 
