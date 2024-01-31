@@ -28,11 +28,6 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    this.coursesService.getCategorias().subscribe((data) => {
-      this.categorys = data;
-    });
-
     this.coursesService.getChallenges().subscribe((data) =>{
       this.cardDataList = data
     })

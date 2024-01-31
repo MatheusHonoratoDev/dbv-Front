@@ -7,7 +7,6 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { MatCardModule } from '@angular/material/card';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { ChallangeRegisterComponent } from './challange-register/challange-register.component';
 import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 import { RegisterMemberComponent } from './register-member/register-member.component';
@@ -21,7 +20,6 @@ import { ToolsComponent } from './tools/tools.component';
 @NgModule({
   declarations: [
     AdminComponent,
-    EditCustomerComponent,
     ChallangeRegisterComponent,
     ChallengeListComponent,
     RegisterMemberComponent,

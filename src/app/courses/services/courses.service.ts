@@ -25,10 +25,6 @@ export class CoursesService {
     return this.httpClient.post<any>(`${this.API}/filterCategory`, data);
   }
 
-  getCategorias(): Observable<any[]> {
-    return this.httpClient.get<any[]>(`${this.API}/getCategorias`);
-  }
-
   getChallengeById(id: any): Observable<any>{
     return this.httpClient.get<any>(`${this.API}/getChallengeById/${id}`)
   }
@@ -55,14 +51,6 @@ export class CoursesService {
 
   postLike(data: any): Observable<any> {
     return this.httpClient.post<any>(`${this.API}/postLike`, data);
-  }
-
-  getLikes(publicationId: string): Observable<any> {
-    return this.httpClient.get(`${this.API}/getLikes?publicationId=${publicationId}`);
-  }
-
-  checkUserLike(userId: string, publicationId: string): Observable<any> {
-    return this.httpClient.get(`${this.API}/checkUserLike?userId=${userId}&publicationId=${publicationId}`);
   }
 
   chellengePoints(data: any): Observable<any> {

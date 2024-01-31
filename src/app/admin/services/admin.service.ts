@@ -18,30 +18,9 @@ export class AdminService {
   creatChallenge(challenge: any): Observable<any> {
     return this.httpClient.post<any>(`${this.API}/creatChallenge`, challenge);
   }
-  
-  getCustomers(): Observable<any[]> {
-    return this.httpClient.get<any[]>(`${this.API}/getcustomers`);
-  }
-
-  getCategorias(): Observable<any[]> {
-    return this.httpClient.get<any[]>(`${this.API}/getCategorias`);
-  }
 
   getRoles(): Observable<any[]> {
     return this.httpClient.get<any[]>(`${this.API}/getRoles`);
-  }
-
-  editEstabelecimento(editCustomer: any): Observable<any> {
-    return this.httpClient.put<any>(`${this.API}/editCustomerViewAdm`, editCustomer);
-  }
-
-  deleteEstabelecimento(deletedCustomer: any): Observable<any> {
-    return this.httpClient.put<any>(`${this.API}/deleteCustomer`, deletedCustomer);
-  }
-
-  getAddressByCep(cep: string): Observable<any> {
-    const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
-    return this.httpClient.get(apiUrl);
   }
 
   getChallenges(): Observable<any[]>{
@@ -59,7 +38,6 @@ export class AdminService {
   registerMember(member: any): Observable<any> {
     return this.httpClient.post<any>(`${this.API}/registerMember`, member);
   }
-
 
   getPositions(): Observable<any[]>{
     return this.httpClient.get<any[]>(`${this.API}/getPositions`);
@@ -121,7 +99,6 @@ export class AdminService {
     return this.httpClient.put<any>(`${this.API}/updateUnit/`, data)
   }
 
-
   getTools(): Observable<any[]>{
     return this.httpClient.get<any[]>(`${this.API}/getTools`);
   }
@@ -173,11 +150,6 @@ export class AdminService {
   
   getProfilePicture(id: number): Observable<any[]>{
     const url = `${this.API}/getProfilePicture/${id}`;
-    return this.httpClient.get<any[]>(url);
-  }
-
-  getFotos(id: number): Observable<any[]>{
-    const url = `${this.API}/getFotos/${id}`;
     return this.httpClient.get<any[]>(url);
   }
 
