@@ -9,7 +9,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { SharedModule } from './shared/shared.module';
-import { GoogleMapsModule } from '@angular/google-maps'
 import { FormsModule } from '@angular/forms';
 import { LoadingSpinnerInterceptor } from './shared/interceptor/loading-spinner-interceptor.interceptor';
 import { DatePipe } from '@angular/common';
@@ -30,7 +29,6 @@ import localePt from '@angular/common/locales/pt';
     LoginModule,
     AppMaterialModule,
     SharedModule,
-    GoogleMapsModule,
     FormsModule,
   ],
   providers: [
