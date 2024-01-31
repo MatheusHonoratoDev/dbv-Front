@@ -26,11 +26,11 @@ export class CoursesService {
   }
 
   getCategorias(): Observable<any[]> {
-    return this.httpClient.get<any[]>('https://clube-dbv-1946073446dc.herokuapp.com/getCategorias');
+    return this.httpClient.get<any[]>(`${this.API}/getCategorias`);
   }
 
   getChallengeById(id: any): Observable<any>{
-    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getChallengeById/${id}`)
+    return this.httpClient.get<any>(`${this.API}/getChallengeById/${id}`)
   }
 
   setChallengeId(member: any) {
@@ -42,7 +42,7 @@ export class CoursesService {
   }
 
   getMembersbyId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getMembersbyId/${id}`)
+    return this.httpClient.get<any>(`${this.API}/getMembersbyId/${id}`)
   }
 
   createPublications(data: any): Observable<any> {
@@ -66,7 +66,7 @@ export class CoursesService {
   }
 
   chellengePoints(data: any): Observable<any> {
-    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/chellengePoints', data);
+    return this.httpClient.put<any>(`${this.API}/chellengePoints`, data);
   }
 
   getChallengePoints(userId: any, challengerId: any): Observable<any>{

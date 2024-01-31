@@ -7,13 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class MyProfileService {
 
+  private readonly API = 'https://clube-dbv-1946073446dc.herokuapp.com';
+
   constructor(private httpClient: HttpClient) { }
 
   getMembersbyId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com/getMembersbyId/${id}`)
+    return this.httpClient.get<any>(`${this.API}/getMembersbyId/${id}`)
   }
 
   editMember(editMember: any): Observable<any> {
-    return this.httpClient.put<any>('https://clube-dbv-1946073446dc.herokuapp.com/editMember', editMember);
+    return this.httpClient.put<any>(`${this.API}/editMember`, editMember);
   }
 }

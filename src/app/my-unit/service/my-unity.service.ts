@@ -20,10 +20,10 @@ export class MyUnityService {
   }
 
   getMembersByUnitId(id: any): Observable<any>{
-    return this.httpClient.get<any>(`https://clube-dbv-1946073446dc.herokuapp.com//getMembersByUnitId/${id}`)
+    return this.httpClient.get<any>(`${this.API}/getMembersByUnitId/${id}`)
   }
 
   addPoints(data: any){
-    return this.httpClient.post<any>(`https://clube-dbv-1946073446dc.herokuapp.com/addPoints`, { data })
+    return this.httpClient.post<any>(`${this.API}/addPoints`, { data })
   }
 }

@@ -9,7 +9,6 @@ import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { DialogAppointmentsComponent } from './components/dialog-appointments/dialog-appointments.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { ChallengeDetailsComponent } from './components/challenge-details/challenge-details.component';
 import { PublicationsComponent } from './components/publications/publications.component';
@@ -20,7 +19,6 @@ import { RakingComponent } from '../shared/components/raking/raking.component';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [CoursesComponent, 
-    DialogAppointmentsComponent, 
     ChallengeDetailsComponent, 
     PublicationsComponent, 
     DialogPubComponent, 
