@@ -7,7 +7,6 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { MatCardModule } from '@angular/material/card';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ChallengeDetailsComponent } from './components/challenge-details/challenge-details.component';
 import { PublicationsComponent } from './components/publications/publications.component';
@@ -31,7 +30,6 @@ import { RakingComponent } from '../shared/components/raking/raking.component';
     MatCardModule,
     SharedModule,
     ReactiveFormsModule,
-    GoogleMapsModule,
   ],
 })
 export class CoursesModule {}
