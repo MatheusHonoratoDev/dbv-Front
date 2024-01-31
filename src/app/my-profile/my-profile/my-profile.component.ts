@@ -68,7 +68,6 @@ export class MyProfileComponent {
       status: true,
       login: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
-      id: ['']
     });
   }
 
@@ -77,7 +76,8 @@ export class MyProfileComponent {
       const formData = this.FormMember.value;
       formData.birthday = this.datePipe.transform(formData.birthday, 'yyyy-MM-dd');
       formData.image = this.dataSelectedImage;
-      formData.id = this.memberId;
+      formData.id = this.getId.id;
+      console.log(formData)
 
       this.myProfileService.editMember(formData).subscribe(
         (response) => {
